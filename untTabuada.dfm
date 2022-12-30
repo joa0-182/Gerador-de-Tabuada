@@ -1,10 +1,12 @@
-object Form1: TForm1
+object frmTabuada: TfrmTabuada
   Left = 0
   Top = 0
   HelpType = htKeyword
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
   Caption = 'Gerador de Tabuadas'
-  ClientHeight = 434
-  ClientWidth = 349
+  ClientHeight = 441
+  ClientWidth = 352
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -20,7 +22,7 @@ object Form1: TForm1
   object edtInicio2: TLabel
     Left = 205
     Top = 56
-    Width = 121
+    Width = 86
     Height = 18
     Caption = 'Tabuada do:'
     Font.Charset = ANSI_CHARSET
@@ -113,6 +115,13 @@ object Form1: TForm1
     Top = 49
     Width = 161
     Height = 297
+    Alignment = taCenter
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     ReadOnly = True
     ScrollBars = ssVertical
     TabOrder = 2
@@ -124,6 +133,11 @@ object Form1: TForm1
     Height = 60
     Hint = 'Presione F1'
     Caption = 'Calcular'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Segoue ui'
+    Font.Style = []
     Glyph.Data = {
       B60D0000424DB60D000000000000360000002800000030000000180000000100
       180000000000800D000000000000000000000000000000000000FFFFFFFFFFFF
@@ -237,6 +251,7 @@ object Form1: TForm1
       B0B0B0B0B0B0B0B0B0B0B0B0B0B0B0B0B0D0D0D0FFFFFFFFFFFF}
     Layout = blGlyphTop
     NumGlyphs = 2
+    ParentFont = False
     ParentShowHint = False
     ShowHint = True
     TabOrder = 3
@@ -249,6 +264,11 @@ object Form1: TForm1
     Height = 60
     Hint = 'Presione F2'
     Caption = 'Limpar'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = []
     Glyph.Data = {
       B60D0000424DB60D000000000000360000002800000030000000180000000100
       180000000000800D000000000000000000000000000000000000FFFFFFFFFFFF
@@ -362,6 +382,7 @@ object Form1: TForm1
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
     Layout = blGlyphTop
     NumGlyphs = 2
+    ParentFont = False
     ParentShowHint = False
     ShowHint = True
     TabOrder = 4
@@ -374,6 +395,11 @@ object Form1: TForm1
     Height = 60
     Hint = 'Presione Esq'
     Caption = 'Sair'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Segoue ui'
+    Font.Style = []
     Glyph.Data = {
       B60D0000424DB60D000000000000360000002800000030000000180000000100
       180000000000800D000000000000000000000000000000000000FFFFFFFFFFFF
@@ -487,6 +513,7 @@ object Form1: TForm1
       F8F8FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
     Layout = blGlyphTop
     NumGlyphs = 2
+    ParentFont = False
     ParentShowHint = False
     ShowHint = True
     TabOrder = 5

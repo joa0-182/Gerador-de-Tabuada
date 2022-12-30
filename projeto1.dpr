@@ -2,13 +2,13 @@ program projeto1;
 
 uses
   Vcl.Forms,
-  untTabuada in 'untTabuada.pas' {Form1};
+  untTabuada in 'untTabuada.pas' {frmTabuada};
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TfrmTabuada, frmTabuada);
   Application.Run;
 end.

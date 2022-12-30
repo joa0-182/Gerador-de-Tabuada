@@ -1,0 +1,14 @@
+program projeto1;
+
+uses
+  Vcl.Forms,
+  untTabuada in 'untTabuada.pas' {frmTabuada};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  AApplication.CreateForm(TfrmTabuada, frmTabuada);
+  pplication.Run;
+end.

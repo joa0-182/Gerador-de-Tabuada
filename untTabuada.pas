@@ -7,7 +7,7 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons;
 
 type
-  TForm1 = class(TForm)
+  TfrmTabuada = class(TForm)
     edtInicio: TEdit;
     edtFim: TEdit;
     edtInicio2: TLabel;
@@ -30,19 +30,32 @@ type
   end;
 
 var
-  Form1: TForm1;
+  frmTabuada: TfrmTabuada;
 
 implementation
 
 {$R *.dfm}
 
-procedure TForm1.BitBtn1Click(Sender: TObject);
+procedure TfrmTabuada.BitBtn1Click(Sender: TObject);
 var inicio, fim, cont, ate, res: integer;
 begin
+  if (edtInicio.Text = '') or (edtFim.Text = '') or (edtAte.Text = '') then
+begin
+  application.MessageBox('Preencha todos os campos!', ' Atenção');
+end
+else
+begin
+
       inicio := StrToInt(edtInicio.Text);
       fim := StrToInt(edtFim.Text);
       ate := StrToInt(edtAte.Text);
 
+    if inicio > fim then
+    begin
+      Application.MessageBox('Lógica inválida', ' Atenção')
+    end
+    else
+    begin
       while (inicio <= fim) do
       begin
         cont := 0;
@@ -56,25 +69,36 @@ begin
         inicio := inicio + 1;
         memRes.Lines.add('___________');
       end;
+
+      edtInicio.Clear;
+      edtFim.Clear;
+      edtAte.Clear;
+    end;
+
+
 end;
 
-procedure TForm1.BitBtn2Click(Sender: TObject);
+
+end;
+
+procedure TfrmTabuada.BitBtn2Click(Sender: TObject);
 begin
       edtInicio.Clear;
       edtFim.Clear;
+      edtAte.Clear;
       memRes.Clear;
       edtInicio.SetFocus;
 end;
 
-procedure TForm1.BitBtn3Click(Sender: TObject);
+procedure TfrmTabuada.BitBtn3Click(Sender: TObject);
 begin
-      if application.MessageBox('Deseja Sair?','Confirme',
+      if application.MessageBox('Deseja Sair?',' Confirme',
       MB_YESNO+MB_ICONQUESTION+MB_DEFBUTTON2) = idyes then
           close;
 
 end;
 
-procedure TForm1.FormKeyDown(Sender: TObject; var Key: Word;
+procedure TfrmTabuada.FormKeyDown(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 begin
       if key = vk_f1 then
